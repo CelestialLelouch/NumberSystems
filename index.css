@@ -1,0 +1,76 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #2C3848;
+    gap: 15px;
+
+    height: 100vh;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.operation-table{
+    display: grid;
+    grid-template-columns: repeat(2,  minmax(300px, 2fr));
+    grid-gap: 10px;
+}
+
+.operations{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #10171f;
+    width: 610px;
+    border-radius:10px ;
+    gap: 30px;
+
+}
+
+.operations > label{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.operations > input{
+    width: 50px;
+    padding: 10px 20px;
+}
+
+input{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+    padding: 8px;
+    margin: 8px;
+    border-radius: 5px;
+    width: 200px;
+}
+
+button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #5272A4;
+    color: white;
+}
+
+button:hover{
+    background-color: #35495e;
+    padding: 12px 22px;
+}
+
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+    background: #10171f ;
+    border-radius: 10px;
+    width: 300px;
+    height: 150px;
+}

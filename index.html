@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMP107</title>
+
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js"></script>
+</head>
+<body>
+
+    <span>
+        <h1 style="color: aliceblue;">
+            Excess-2<sup>m-1</sup> Representation
+        </h1>
+    </span>
+
+    <span class="operation-table">
+        <div class="pane1">
+            <input type="number" id="num1" placeholder="Number 1">
+            <input type="number" id="num2" placeholder="Number 2">
+        </div>
+
+        <div class="pane2">
+            <input type="text"  id="bin_num1" placeholder="Binary 1 in Excess-2">
+            <input type="text"  id="bin_num2" placeholder="Binary 2 in Excess-2">
+        </div>
+
+        <div  class="pane3">
+            <input type="text"  id="sum_num" placeholder="Total">
+            <input type="text"  id="sum_bin_exc" placeholder="Total Binary in Excess-2">
+        </div>
+
+        <div class="pane4">
+            <input type="text"  id="ord_bin" placeholder="Total Binary">
+            <input type="text"  id="exc_bin" placeholder="Total Binary Adjusted">
+        </div>
+    </span>
+    <span class="operations">
+        <label>Bits:</label>
+        <input type="number" id="bits" min="6" value="6">
+        <button onclick="Add()">Add</button>
+    </span>
+</body>
+</html>

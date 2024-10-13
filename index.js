@@ -83,3 +83,43 @@ function Add(){
     document.getElementById("sum_bin_exc").value = processExcess2m(a, b, bits); 
     document.getElementById("exc_bin").value = processExcess2m(a, b, bits);
 }
+
+
+///Floating Point Numbers Processing
+
+function convertProperFractionToBinary(numerator, denominator, pbase, bits){
+    let remainder = "";
+    let result ="";
+    let base = pbase;
+    let fraction = numerator / denominator;
+    let temp_fraction = fraction;
+    while(Math.floor(temp_fraction) - temp_fraction != 0){
+        temp_fraction = temp_fraction * base;
+        remainder += parseInt(temp_fraction - (temp_fraction - Math.floor(temp_fraction)));
+        temp_fraction = temp_fraction - Math.floor(temp_fraction)
+
+        if(temp_fraction == fraction && bits == 0){
+            result = "0."+result + "...";
+            return result;
+        }
+        result =  (result +""+ remainder);
+        remainder = "";
+    }
+
+    if(result.length > bits){
+        result = result.slice(0,bits);
+    }else if(result.length < bits){
+        result = result + "0".repeat(bits - result.length);
+    }
+
+    return "0."+result;
+}
+
+function calculateFloatingPointNumberSystem(){
+    let numerator = parseInt(document.getElementById("numer").value);
+    let denominator = parseInt(document.getElementById("denomer").value);
+    let base = parseInt(document.getElementById("base").value);
+    let bits = document.getElementById("bits").value;
+    let output = document.getElementById("output");
+    output.value = convertProperFractionToBinary(numerator, denominator, base, bits); 
+}
